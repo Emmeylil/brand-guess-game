@@ -168,7 +168,7 @@ export const BrandGuessGame = () => {
   const [score, setScore] = useState(0);
   const [userAnswer, setUserAnswer] = useState("");
   const [isAnswered, setIsAnswered] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(30);
+  const [timeLeft, setTimeLeft] = useState(15);
   const leaderboardEntries = useQuery(api.leaderboardEntry.getEntries)
   const mutation = useMutation(api.leaderboardEntry.setEntry)
 
@@ -193,7 +193,7 @@ export const BrandGuessGame = () => {
     setScore(0);
     setUserAnswer("");
     setIsAnswered(false);
-    setTimeLeft(30);
+    setTimeLeft(15);
   };
 
   const handleAnswer = () => {
@@ -218,7 +218,7 @@ export const BrandGuessGame = () => {
         setCurrentQuestion(currentQuestion + 1);
         setUserAnswer("");
         setIsAnswered(false);
-        setTimeLeft(30);
+        setTimeLeft(15);
       } else {
         setGameState("finished");
 
@@ -246,7 +246,7 @@ export const BrandGuessGame = () => {
     setScore(0);
     setUserAnswer("");
     setIsAnswered(false);
-    setTimeLeft(30);
+    setTimeLeft(15);
   };
 
   const getScoreMessage = () => {
@@ -281,7 +281,7 @@ export const BrandGuessGame = () => {
             <div className="space-y-4">
               <div className="text-sm text-muted-foreground space-y-1">
                 <p>• {questions.length} questions</p>
-                <p>• 30 seconds per question</p>
+                <p>• 15 seconds per question</p>
                 <p>• Type your answer</p>
               </div>
               <Button
