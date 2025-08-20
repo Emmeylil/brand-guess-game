@@ -210,7 +210,7 @@ export const BrandGuessGame = () => {
       setScore(score + 1);
       toast.success("Correct! 🎉");
     } else {
-      toast.error(`Wrong! The answer was ${questions[currentQuestion].correctAnswer}`);
+      toast.error(`Wrong Answer!`);
     }
 
     setTimeout(async () => {
