@@ -1,5 +1,5 @@
 import { v } from "convex/values";
-import { mutation, query } from "./_generated/server";
+import { internalQuery, mutation, query } from "./_generated/server";
 
 export const getEntries = query({
     args: {},
@@ -7,6 +7,16 @@ export const getEntries = query({
         return await ctx.db.query("leaderboardEntry").collect();
     },
 });
+
+export const getEntriesInternal = internalQuery({
+    args: {
+    },
+    handler: async (ctx, args) => {
+        const scores = await ctx.db.query("leaderboardEntry").collect()
+
+        return scores
+    }
+})
 
 export const setEntry = mutation({
     args: {
