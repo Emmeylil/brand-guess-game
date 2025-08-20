@@ -389,7 +389,7 @@ export const BrandGuessGame = () => {
               </Table>
 
               <div className="text-center text-sm text-muted-foreground mt-4">
-                <p>💡 Connect to Supabase to save your scores and compete!</p>
+                <p>💡 Powered by Jumia Nigeria!</p>
               </div>
             </div>
           </div>
