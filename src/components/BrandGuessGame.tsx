@@ -429,8 +429,8 @@ export const BrandGuessGame = () => {
 
             <div className="space-y-4">
               <div className="flex justify-between items-center text-sm text-muted-foreground">
-                <span>REFRESH: 9m : 52s</span>
-                <span>SCORE DATE</span>
+                {/* <span>REFRESH: 9m : 52s</span>
+                <span>SCORE DATE</span> */}
               </div>
 
               <Table>
