@@ -12,13 +12,21 @@ import { useQuery, useMutation } from "convex/react";
 import { api } from "@/lib/convex/_generated/api";
 
 // Import Jumia brand product images
-import tecnoImage from "@/assets/tecno-phone.jpg";
-import infinixImage from "@/assets/infinix-phone.jpg";
-import oraimoImage from "@/assets/oraimo-powerbank.jpg";
-import adidasImage from "@/assets/adidas-shoes.jpg";
-import samsungImage from "@/assets/samsung-galaxy.jpg";
-import iphoneImage from "@/assets/iphone.jpg";
-
+import nivea from "@/assets/nivea.webp";
+import poco from "@/assets/poco.jpg";
+import aeon from "@/assets/aeon.jpg";
+import xiaomi from "@/assets/xiaomi.jpg";
+import danami from "@/assets/danami.jpg";
+import dettol from "@/assets/dettol.jpg";
+import ecoflow from "@/assets/ecoflow.jpg";
+import glamstar from "@/assets/glamstar.jpg";
+import hisense from "@/assets/hisense.png";
+import itel from "@/assets/itel.jpg";
+import loreal from "@/assets/loreal.webp";
+import maybelline from "@/assets/maybelline.jpg";
+import nexus from "@/assets/nexus.jpg";
+import oraimo from "@/assets/oraimo.jpg";
+import silvercrest from "@/assets/silver-crest.jpg";
 interface Question {
   id: number;
   image: string;
@@ -29,39 +37,102 @@ interface Question {
 const questions: Question[] = [
   {
     id: 1,
-    image: tecnoImage,
-    correctAnswer: "Tecno",
-    acceptableAnswers: ["tecno", "tecno mobile", "tecno phone"]
+    image: nivea,
+    correctAnswer: "Nivea",
+    acceptableAnswers: ["nivea", "nivea store", "Nivea Store"]
   },
   {
     id: 2,
-    image: infinixImage,
-    correctAnswer: "Infinix",
-    acceptableAnswers: ["infinix", "infinix mobile", "infinix phone"]
+    image: poco,
+    correctAnswer: "Poco",
+    acceptableAnswers: ["poco", "poco store", "Poco Store"]
   },
   {
     id: 3,
-    image: oraimoImage,
-    correctAnswer: "Oraimo",
-    acceptableAnswers: ["oraimo", "oraimo power bank", "oraimo powerbank"]
+    image: aeon,
+    correctAnswer: "Aeon",
+    acceptableAnswers: ["aeon", "aeon store", "aeon Store"]
   },
   {
     id: 4,
-    image: adidasImage,
-    correctAnswer: "Adidas",
-    acceptableAnswers: ["adidas", "adidas shoes", "adidas sneakers"]
-  },
+    image: xiaomi,
+    correctAnswer: "Xiaomi",
+    acceptableAnswers: ["xiaomi", "xiaomi store", "Xiaomi Store"]
+  }
+  ,
   {
     id: 5,
-    image: samsungImage,
-    correctAnswer: "Samsung",
-    acceptableAnswers: ["samsung", "samsung galaxy", "samsung phone"]
-  },
+    image: danami,
+    correctAnswer: "Danami",
+    acceptableAnswers: ["danami", "danami store", "Danami Store"]
+  }
+  ,
   {
     id: 6,
-    image: iphoneImage,
-    correctAnswer: "Apple",
-    acceptableAnswers: ["apple", "iphone", "apple iphone"]
+    image: dettol,
+    correctAnswer: "Dettol",
+    acceptableAnswers: ["dettol", "dettol store", "Dettol Store"]
+  }
+  ,
+  {
+    id: 7,
+    image: ecoflow,
+    correctAnswer: "Ecoflow",
+    acceptableAnswers: ["ecoflow", "ecoflow store", "Ecoflow Store"]
+  }
+  ,
+  {
+    id: 8,
+    image: glamstar,
+    correctAnswer: "Glamstar",
+    acceptableAnswers: ["glamstar", "glamstar store", "Glamstar Store"]
+  }
+  ,
+  {
+    id: 9,
+    image: hisense,
+    correctAnswer: "Hisense",
+    acceptableAnswers: ["hisense", "hisense store", "Hisense Store"]
+  }
+  ,
+  {
+    id: 10,
+    image: itel,
+    correctAnswer: "Itel",
+    acceptableAnswers: ["itel", "itel store", "Itel Store"]
+  }
+  ,
+  {
+    id: 11,
+    image: loreal,
+    correctAnswer: "Loreal",
+    acceptableAnswers: ["L’Oréal", "L’Oréal Professionnel Paris Store", "loreal Store"]
+  }
+  ,
+  {
+    id: 12,
+    image: maybelline,
+    correctAnswer: "Maybelline",
+    acceptableAnswers: ["maybelline", "Maybelline New York Store", "Maybelline Store"]
+  }
+  ,
+  {
+    id: 13,
+    image: nexus,
+    correctAnswer: "Nexus",
+    acceptableAnswers: ["nexus", "nexus store", "nexus Store"]
+  },
+  {
+    id: 14,
+    image: oraimo,
+    correctAnswer: "Oraimo",
+    acceptableAnswers: ["oraimo", "oraimo store", "Oraimo Store"]
+  },
+  {
+    id: 15,
+    image: silvercrest,
+    correctAnswer: "Silver Crest",
+    acceptableAnswers: ["silvercrest", "SilverCrest", "Sliver Crest Store"]
   }
 ];
 
