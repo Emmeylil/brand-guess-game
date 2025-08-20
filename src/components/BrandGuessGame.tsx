@@ -8,6 +8,8 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { toast } from "sonner";
 import { Trophy, RotateCcw, Play, Send, Medal, Crown } from "lucide-react";
 import { LoginForm } from "./LoginForm";
+import { useQuery, useMutation } from "convex/react";
+import { api } from "@/lib/convex/_generated/api";
 
 // Import Jumia brand product images
 import tecnoImage from "@/assets/tecno-phone.jpg";
@@ -87,6 +89,7 @@ const mockLeaderboard: LeaderboardEntry[] = [
   { id: 5, name: "Nicholas", score: 3, maxScore: 6, date: "2024-01-16" },
 ];
 
+
 export const BrandGuessGame = () => {
   const [gameState, setGameState] = useState<GameState>("login");
   const [user, setUser] = useState<User | null>(null);
@@ -95,6 +98,8 @@ export const BrandGuessGame = () => {
   const [userAnswer, setUserAnswer] = useState("");
   const [isAnswered, setIsAnswered] = useState(false);
   const [timeLeft, setTimeLeft] = useState(30);
+  const leaderboardEntries = useQuery(api.leaderboardEntry.getEntries)
+  const mutation = useMutation(api.leaderboardEntry.setEntry)
 
   useEffect(() => {
     if (gameState === "playing" && timeLeft > 0 && !isAnswered) {
@@ -137,7 +142,7 @@ export const BrandGuessGame = () => {
       toast.error(`Wrong! The answer was ${questions[currentQuestion].correctAnswer}`);
     }
 
-    setTimeout(() => {
+    setTimeout(async () => {
       if (currentQuestion < questions.length - 1) {
         setCurrentQuestion(currentQuestion + 1);
         setUserAnswer("");
@@ -145,11 +150,19 @@ export const BrandGuessGame = () => {
         setTimeLeft(30);
       } else {
         setGameState("finished");
+
+        await mutation({
+          name: user.name,
+          email: user.email,
+          score: score,
+          maxScore: questions.length,
+          date: new Date().toLocaleString()
+        })
       }
     }, 2000);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (userAnswer.trim() && !isAnswered) {
       handleAnswer();
@@ -357,8 +370,8 @@ export const BrandGuessGame = () => {
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  {mockLeaderboard.map((entry, index) => (
-                    <TableRow key={entry.id} className="border-jumia/10 hover:bg-jumia/5">
+                  {leaderboardEntries.map((entry, index) => (
+                    <TableRow key={entry._id} className="border-jumia/10 hover:bg-jumia/5">
                       <TableCell className="font-medium flex items-center gap-3">
                         {index === 0 && <Crown className="w-4 h-4 text-yellow-500" />}
                         {index === 1 && <Medal className="w-4 h-4 text-gray-400" />}
