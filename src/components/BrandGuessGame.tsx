@@ -403,7 +403,7 @@ export const BrandGuessGame = () => {
                   acceptableAnswer => acceptableAnswer.toLowerCase() === userAnswer.toLowerCase().trim()
                 )
                   ? "✅ Correct! Well done!"
-                  : `❌ The correct answer was: ${questions[currentQuestion].correctAnswer}`
+                  : `❌ Wrong Answer`
                 }
               </p>
             </div>
