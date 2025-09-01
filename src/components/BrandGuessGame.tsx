@@ -43,9 +43,9 @@ const questions: Question[] = [
   },
   {
     id: 2,
-    image: poco,
-    correctAnswer: "Poco",
-    acceptableAnswers: ["poco", "poco store", "Poco Store"]
+    image: dettol,
+    correctAnswer: "Dettol",
+    acceptableAnswers: ["dettol", "dettol store", "Dettol Store"]
   },
   {
     id: 3,
@@ -55,65 +55,9 @@ const questions: Question[] = [
   },
   {
     id: 4,
-    image: xiaomi,
-    correctAnswer: "Xiaomi",
-    acceptableAnswers: ["xiaomi", "xiaomi store", "Xiaomi Store"]
-  }
-  ,
-  {
-    id: 5,
-    image: danami,
-    correctAnswer: "Danami",
-    acceptableAnswers: ["danami", "danami store", "Danami Store"]
-  }
-  ,
-  {
-    id: 6,
-    image: dettol,
-    correctAnswer: "Dettol",
-    acceptableAnswers: ["dettol", "dettol store", "Dettol Store"]
-  }
-  ,
-  {
-    id: 7,
-    image: ecoflow,
-    correctAnswer: "Ecoflow",
-    acceptableAnswers: ["ecoflow", "ecoflow store", "Ecoflow Store"]
-  }
-  ,
-  {
-    id: 8,
-    image: glamstar,
-    correctAnswer: "Glamstar",
-    acceptableAnswers: ["glamstar", "glamstar store", "Glamstar Store"]
-  }
-  ,
-  {
-    id: 9,
-    image: hisense,
-    correctAnswer: "Hisense",
-    acceptableAnswers: ["hisense", "hisense store", "Hisense Store"]
-  }
-  ,
-  {
-    id: 10,
-    image: itel,
-    correctAnswer: "Itel",
-    acceptableAnswers: ["itel", "itel store", "Itel Store"]
-  }
-  ,
-  {
-    id: 11,
-    image: loreal,
-    correctAnswer: "Loreal",
-    acceptableAnswers: ["L’Oréal", "L’Oréal Professionnel Paris Store", "loreal Store"]
-  }
-  ,
-  {
-    id: 12,
-    image: maybelline,
-    correctAnswer: "Maybelline",
-    acceptableAnswers: ["maybelline", "Maybelline New York Store", "Maybelline Store"]
+    image: oraimo,
+    correctAnswer: "Oraimo",
+    acceptableAnswers: ["oraimo", "oraimo store", "Oraimo Store"]
   }
   ,
   {
@@ -121,18 +65,6 @@ const questions: Question[] = [
     image: nexus,
     correctAnswer: "Nexus",
     acceptableAnswers: ["nexus", "nexus store", "nexus Store"]
-  },
-  {
-    id: 14,
-    image: oraimo,
-    correctAnswer: "Oraimo",
-    acceptableAnswers: ["oraimo", "oraimo store", "Oraimo Store"]
-  },
-  {
-    id: 15,
-    image: silvercrest,
-    correctAnswer: "Silver Crest",
-    acceptableAnswers: ["silvercrest", "SilverCrest", "Sliver Crest Store"]
   }
 ];
 
