@@ -12,21 +12,12 @@ import { useQuery, useMutation } from "convex/react";
 import { api } from "@/lib/convex/_generated/api";
 
 // Import Jumia brand product images
-import nivea from "@/assets/nivea.webp";
-import poco from "@/assets/poco.jpg";
-import aeon from "@/assets/aeon.jpg";
-import xiaomi from "@/assets/xiaomi.jpg";
-import danami from "@/assets/danami.jpg";
-import dettol from "@/assets/dettol.jpg";
-import ecoflow from "@/assets/ecoflow.jpg";
-import glamstar from "@/assets/glamstar.jpg";
-import hisense from "@/assets/hisense.png";
 import itel from "@/assets/itel.jpg";
-import loreal from "@/assets/loreal.webp";
-import maybelline from "@/assets/maybelline.jpg";
-import nexus from "@/assets/nexus.jpg";
-import oraimo from "@/assets/oraimo.jpg";
-import silvercrest from "@/assets/silver-crest.jpg";
+import hisense from "@/assets/Hisense.png";
+import xiaomi from "@/assets/xiaomi.jpg";
+import Maybelline from "@/assets/Maybelline.jpg";
+import glamstar from "@/assets/glamstar.jpg";
+
 interface Question {
   id: number;
   image: string;
@@ -37,34 +28,34 @@ interface Question {
 const questions: Question[] = [
   {
     id: 1,
-    image: nivea,
-    correctAnswer: "Nivea",
-    acceptableAnswers: ["nivea", "nivea store", "Nivea Store"]
+    image: itel,
+    correctAnswer: "Itel",
+    acceptableAnswers: ["itel", "Itel store", "itel Store"]
   },
   {
     id: 2,
-    image: dettol,
-    correctAnswer: "Dettol",
-    acceptableAnswers: ["dettol", "dettol store", "Dettol Store"]
+    image: hisense,
+    correctAnswer: "Hisense",
+    acceptableAnswers: ["hisense", "hisense store", "Hisense Store"]
   },
   {
     id: 3,
-    image: aeon,
-    correctAnswer: "Aeon",
-    acceptableAnswers: ["aeon", "aeon store", "aeon Store"]
+    image: glamstar,
+    correctAnswer: "Glamstar",
+    acceptableAnswers: ["glamstar", "Glamstar store", "glamstar Store"]
   },
   {
     id: 4,
-    image: oraimo,
-    correctAnswer: "Oraimo",
-    acceptableAnswers: ["oraimo", "oraimo store", "Oraimo Store"]
+    image: xiaomi,
+    correctAnswer: "Xiaomi",
+    acceptableAnswers: ["xiaomi", "Xiaomi store", "xiaomi Store"]
   }
   ,
   {
     id: 13,
-    image: nexus,
-    correctAnswer: "Nexus",
-    acceptableAnswers: ["nexus", "nexus store", "nexus Store"]
+    image: Maybelline,
+    correctAnswer: "Maybelline",
+    acceptableAnswers: ["maybelline", "maybelline store", "Maybelline Store"]
   }
 ];
 
