@@ -30,7 +30,7 @@ const questions: Question[] = [
     id: 1,
     image: itel,
     correctAnswer: "Itel",
-    acceptableAnswers: ["itel", "Itel store", "itel Store"]
+    acceptableAnswers: ["itels", "Itel store", "itel Store"]
   },
   {
     id: 2,
