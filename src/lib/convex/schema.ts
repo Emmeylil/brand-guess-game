@@ -1,3 +1,4 @@
+import { Input } from "@/components/ui/input";
 import { defineSchema, defineTable } from "convex/server";
 import { v } from "convex/values";
 
@@ -12,7 +13,17 @@ export default defineSchema({
         score: v.number(),
         maxScore: v.number(),
         date: v.string()
+    }),
+
+    input: defineTable({
+        date: v.string(),
+        image: v.string(),
+        correctAnswers: v.string(),
+        acceptableAnswers: v.array(v.string()),
+
     })
 });
+
+
 
 // { id: 1, name: "Victor Idowu", score: 6, maxScore: 6, date: "2024-01-20" }
