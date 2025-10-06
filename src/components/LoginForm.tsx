@@ -16,17 +16,17 @@ export const LoginForm = ({ onLogin }: LoginFormProps) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!name.trim()) {
       toast.error("Please enter your name");
       return;
     }
-    
+
     if (!email.trim()) {
       toast.error("Please enter your email");
       return;
     }
-    
+
     if (!/\S+@\S+\.\S+/.test(email)) {
       toast.error("Please enter a valid email address");
       return;
@@ -87,7 +87,7 @@ export const LoginForm = ({ onLogin }: LoginFormProps) => {
             </div>
           </div>
 
-          <Button 
+          <Button
             type="submit"
             className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90"
             size="lg"
